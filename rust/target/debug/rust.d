@@ -1,1 +1,0 @@
-/home/osesantos/git/adventofcode-2022/rust/target/debug/rust: /home/osesantos/git/adventofcode-2022/rust/src/day1/mod.rs /home/osesantos/git/adventofcode-2022/rust/src/main.rs /home/osesantos/git/adventofcode-2022/rust/src/utils/mod.rs

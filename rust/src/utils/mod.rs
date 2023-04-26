@@ -1,9 +1,7 @@
-use std::fs;
-use std::str::Lines;
 
-pub fn get_file_lines(file_name: &str) -> Lines {
-    let content = fs::read_to_string("../inputs/".to_string() + file_name).unwrap();
-    let lines = content.lines();
-    return lines.collect()
+use std::fs;
+
+pub fn get_file_lines(_file_name: &str) -> Vec<String> {
+    return fs::read_to_string("src/inputs/".to_string() + _file_name).expect("Could not read the path").lines().map(|s| s.to_string()).collect()
 }
 

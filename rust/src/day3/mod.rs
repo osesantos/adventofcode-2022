@@ -36,5 +36,22 @@ fn calculate_priority(dup: &char) -> i32 {
 
 pub fn day3_2(file_name: &str) -> String {
     let lines = get_file_lines(file_name);
-    "".to_string()
+    let teams = lines.chunks(3);
+    let badges: Vec<char> = teams.map(|chunk| find_badge(&chunk.to_vec())).collect();
+
+    total_score(&badges.iter().map(|c| calculate_priority(c)).collect()).to_string()
+}
+
+fn find_badge(group_sacks: &Vec<String>) -> char {
+    let mut badge: char = ' ';
+    let sac1 = &group_sacks[0];
+    let sac2 = &group_sacks[1];
+    let sac3 = &group_sacks[2];
+
+    sac1.chars().into_iter().for_each(|c| {
+       if (sac2.chars().into_iter().find(|&x| x == c).is_some()) && (sac3.chars().into_iter().find(|&x| x == c).is_some()) {
+           badge = c;
+       }
+    });
+    badge
 }

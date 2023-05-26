@@ -3,7 +3,8 @@ use crate::utils::get_file_lines;
 pub fn day4_1(file_name: &str) -> String {
     let lines = get_file_lines(file_name);
     let ranges: Vec<_>  = lines.iter().map(| l | l.split(",").collect::<Vec<_>>()).collect();
-    let rangesNum = ranges.iter().map(| r | r.split("-").collect::<Vec<_>>()).collect();
+    let ranges2: Vec<_>  = ranges.iter().map(| l | l.into_iter().map(| r | r.split("-").collect::<Vec<_>>()).collect::<Vec<_>>()).collect();
+    let rangesNum: Vec<_> = ranges2.iter().map(|a| a.iter().map(|b| (b.first()..=b.last())))
     "".to_string()
 }
 

@@ -2,7 +2,8 @@ use crate::utils::get_file_lines;
 
 pub fn day4_1(file_name: &str) -> String {
     let lines = get_file_lines(file_name);
-    let ranges: Vec<Vec<String>> = lines.iter().map(| l | l.split(",")).collect();
+    let ranges: Vec<_>  = lines.iter().map(| l | l.split(",").collect::<Vec<_>>()).collect();
+    let rangesNum = ranges.iter().map(| r | r.split("-").collect::<Vec<_>>()).collect();
     "".to_string()
 }
 

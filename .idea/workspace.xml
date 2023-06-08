@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2832b259-287f-4c16-9dde-3f08bc1d346f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/go/day1/day1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/day2/day2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/day3/day3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day1.sample.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day2.sample.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day3.sample.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/input/day3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/adventofcode-2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/adventofcode-2022.iml" afterDir="false" />
+    <list default="true" id="2832b259-287f-4c16-9dde-3f08bc1d346f" name="Changes" comment="Starting go project">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/day1/day1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/day2/day2.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/day3/day3.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day1.sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day2.sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day3.sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/input/day3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,22 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/home/osesantos/git/adventofcode-2022",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/osesantos/git/adventofcode-2022&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/go/utils" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="adventofcode-2022" />
@@ -100,6 +109,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Starting go project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting go project" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

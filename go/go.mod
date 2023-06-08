@@ -1,3 +1,3 @@
-module app/main
+module main
 
 go 1.20

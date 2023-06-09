@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"main/day1"
+	"main/day2"
 )
 
 func main() {
@@ -14,4 +15,9 @@ func main() {
 	fmt.Printf("Day 1.2: %s\n", day1.Part2("day1"))
 
 	// Day 2
+	fmt.Printf("Day 1.1: %s\n", day2.Part1("day2_sample"))
+	fmt.Printf("Day 1.1: %s\n", day2.Part1("day2"))
+
+	fmt.Printf("Day 1.2: %s\n", day2.Part2("day2_sample"))
+	fmt.Printf("Day 1.2: %s\n", day2.Part2("day2"))
 }

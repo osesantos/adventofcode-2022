@@ -19,23 +19,13 @@ func Part1(filename string) string {
 		return ""
 	}
 
-	var scores Scores
+	var scores utils.IntSlice
 	for _, l := range lines {
 		scores = append(scores, getScore(l, func(op rune, my rune) rune {
 			return my
 		}))
 	}
-	return strconv.Itoa(scores.sum())
-}
-
-type Scores []int
-
-func (scores Scores) sum() int {
-	var s int
-	for _, v := range scores {
-		s += v
-	}
-	return s
+	return strconv.Itoa(scores.Sum())
 }
 
 func getScore(line string, parseScoreToPlay func(op rune, my rune) rune) int {

@@ -41,7 +41,7 @@ func Part1(filename string) string {
 func splitInHalf(line string) [][]rune {
 	runes := []rune(line)
 	halfI := len(runes) / 2
-	return [][]rune{runes[:(halfI - 1)], runes[halfI:]}
+	return [][]rune{runes[:halfI], runes[halfI:]}
 }
 
 func findDup(a []rune, b []rune) (rune, error) {

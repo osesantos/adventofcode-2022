@@ -12,6 +12,32 @@ func (s StringArray) ForEach(f func(index int, value string)) {
 	}
 }
 
+func ForEach[T any](data []T, f func(index int, value T)) {
+	for i, v := range data {
+		f(i, v)
+	}
+}
+
+func Map[T, U any](data []T, f func(T) U) []U {
+	res := make([]U, 0, len(data))
+
+	for _, e := range data {
+		res = append(res, f(e))
+	}
+
+	return res
+}
+
+func Filter[T any](data []T, f func(T) bool) []T {
+	filtered := make([]T, 0, len(data))
+	for _, e := range data {
+		if f(e) {
+			filtered = append(filtered, e)
+		}
+	}
+	return filtered
+}
+
 type IntSlice []int
 
 func (is IntSlice) Sum() int {

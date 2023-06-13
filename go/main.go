@@ -6,6 +6,7 @@ import (
 	"main/day2"
 	"main/day3"
 	"main/day4"
+	"main/day5"
 )
 
 func main() {
@@ -45,6 +46,15 @@ func main() {
 
 	fmt.Printf("Day 4.2 sample: %s\n", day4.Part2("day4_sample"))
 	fmt.Printf("Day 4.2: %s\n", day4.Part2("day4"))
+
+	fmt.Println()
+
+	// Day 5
+	fmt.Printf("Day  5.1 sample: %s\n", day5.Part1("day5_sample"))
+	fmt.Printf("Day 5.1: %s\n", day5.Part1("day5"))
+
+	fmt.Printf("Day 5.2 sample: %s\n", day5.Part2("day5_sample"))
+	fmt.Printf("Day 5.2: %s\n", day5.Part2("day5"))
 
 	fmt.Println()
 

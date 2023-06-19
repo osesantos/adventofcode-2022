@@ -18,6 +18,12 @@ func ForEach[T any](data []T, f func(index int, value T)) {
 	}
 }
 
+func ReverseForEach[T any](data []T, f func(index int, value T)) {
+	for i, _ := range data {
+		f(len(data)-1-i, data[len(data)-1-i])
+	}
+}
+
 func Map[T, U any](data []T, f func(T) U) []U {
 	res := make([]U, 0, len(data))
 

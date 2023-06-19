@@ -6,59 +6,102 @@ import (
 	"strings"
 )
 
+//     [D]
+// [N] [C]
+// [Z] [M] [P]
+//  1   2   3
+// check this https://github.com/BrianMwangi21/aoc2022/blob/main/day5/main.go
+
 func Part1(filename string) string {
 	lines, err := utils.ReadLines(filename)
 	if err != nil {
 		return ""
 	}
+	stacks := cleanMatrix(transpose(invert(convertToRune(getFirstLines(lines))), 20))
 
-	return strconv.Itoa(len(lines))
-}
-
-func numberOfStacks(lines []string) int {
-	i := 0
-	utils.ForEach(lines, func(index int, value string) {
-		if isEmptyLine(value) {
-			i = len(strings.ReplaceAll(lines[index-1], " ", ""))
-		}
-	})
-	return i
+	firstLines := convertToString(stacks)
+	return strconv.Itoa(len(firstLines))
 }
 
 func isEmptyLine(line string) bool {
-	return strings.Trim(line, " ") == ""
+	return line == ""
 }
 
-func fillStack(lines []string) [][]rune {
-	numStacks := numberOfStacks(lines)
-	stacks := make([][]rune, numStacks)
-
-	firstLines := utils.Filter(lines, func(s string) bool {
-		return strings.ContainsRune(s, '[')
-	})
-
-	firstLines = utils.Map(firstLines, func(s string) string {
-		cleanedLine := strings.ReplaceAll(s, "   ", "0")
-		cleanedLine = strings.ReplaceAll(cleanedLine, "[", "")
-		cleanedLine = strings.ReplaceAll(cleanedLine, "]", "")
-		cleanedLine = strings.ReplaceAll(cleanedLine, " ", "")
-
-		for i := len(cleanedLine); i < numStacks; i++ {
-			cleanedLine = cleanedLine + "0"
+func numberOfStacks(lines []string) int {
+	for i, line := range lines {
+		if lines[i+1] == "" {
+			return len([]rune(strings.ReplaceAll(line, " ", "")))
 		}
-
-		return cleanedLine
-	})
-
-	return stacks
+	}
+	return 0
 }
 
-func invertMatrix(runeMatrix [][]rune) [][]rune {
-	var inverted = make([][]rune, len(runeMatrix))
-	utils.ForEach(runeMatrix, func(ia int, a []rune) {
-		utils.ForEach(a, func(ib int, b rune) {
+func getFirstLines(lines []string) (firstLines []string) {
+	for i, l := range lines {
+		if isEmptyLine(lines[i]) {
+			return
+		}
+		firstLines = append(firstLines, l)
+	}
+	return
+}
 
+func invert(lines [][]rune) [][]rune {
+	var inverted [][]rune
+	utils.ReverseForEach(lines, func(ia int, a []rune) {
+		var invertedLine []rune
+		utils.ForEach(a, func(ib int, b rune) {
+			invertedLine = append(invertedLine, b)
 		})
+		inverted = append(inverted, invertedLine)
 	})
+
 	return inverted
+}
+
+func transpose(matrix [][]rune, n int) [][]rune {
+	transposed := make([][]rune, n)
+	for i := range transposed {
+		transposed[i] = make([]rune, n)
+	}
+
+	for i := 0; i <= n; i++ {
+		for j := 0; j <= n; j++ {
+			if i < len(matrix) && j < len(matrix[i]) {
+				if matrix[i][j] != '[' && matrix[i][j] != ']' && matrix[i][j] != ' ' {
+					transposed[j][i] = matrix[i][j]
+				}
+			}
+		}
+	}
+
+	return transposed
+}
+
+func convertToRune(lines []string) [][]rune {
+	var lineRune [][]rune
+	utils.ForEach(lines, func(index int, line string) {
+		lineRune = append(lineRune, []rune(line))
+	})
+	return lineRune
+}
+
+func convertToString(runes [][]rune) (r []string) {
+	utils.ForEach(runes, func(_ int, a []rune) {
+		rs := ""
+		utils.ForEach(a, func(_ int, b rune) {
+			rs += string(b)
+		})
+		r = append(r, rs)
+	})
+	return
+}
+
+func cleanMatrix(m [][]rune) (r [][]rune) {
+	for _, v := range m {
+		if v[0] != 0 {
+			r = append(r, v)
+		}
+	}
+	return
 }

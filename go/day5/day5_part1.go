@@ -17,10 +17,13 @@ func Part1(filename string) string {
 	if err != nil {
 		return ""
 	}
-	stacks := cleanMatrix(transpose(invert(convertToRune(getFirstLines(lines))), 20))
+	//stacks := cleanMatrix(transpose(invert(convertToRune(getFirstLines(lines))), 20))
+	//firstLines := convertToString(stacks)
+	//return strconv.Itoa(len(firstLines))
 
-	firstLines := convertToString(stacks)
-	return strconv.Itoa(len(firstLines))
+	firstLines := getFirstLines(lines)
+	stacks := convertToColumns(firstLines)
+	return strconv.Itoa(len(stacks))
 }
 
 func isEmptyLine(line string) bool {
@@ -104,4 +107,20 @@ func cleanMatrix(m [][]rune) (r [][]rune) {
 		}
 	}
 	return
+}
+
+func convertToColumns(lines []string) [][]string {
+	columns := make([][]string, len(lines[0])-1)
+
+	for i := 0; i < len(lines[0])-1; i++ {
+		columns[i] = make([]string, len(lines))
+		for j, line := range lines {
+			s := strings.TrimSpace(string(line[i]))
+			if s != "[" && s != "]" && s != "" {
+				columns[i][j] = strings.TrimSpace(string(line[i]))
+			}
+		}
+	}
+
+	return columns
 }

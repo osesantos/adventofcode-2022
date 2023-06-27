@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use crate::utils::get_file_lines;
 
 struct Movement {
@@ -24,8 +23,9 @@ fn convert_to_list(lines: &Vec<String>) -> Vec<String> {
     let mut lists: Vec<String> = Vec::new();
 
 
-    let trimmed_elem = lines.iter().map(|&e| e.trim()).collect();
+    let trimmed_elem: Vec<_> = lines.iter().map(|&e| e.trim()).collect();
 
+    lists
 }
 
 trait MovementExtensions {

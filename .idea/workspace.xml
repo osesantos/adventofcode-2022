@@ -12,10 +12,8 @@
     <cargoProject FILE="$PROJECT_DIR$/rust/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2832b259-287f-4c16-9dde-3f08bc1d346f" name="Changes" comment="Starting go project">
-      <change beforePath="$PROJECT_DIR$/.idea/adventofcode-2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/adventofcode-2022.iml" afterDir="false" />
+    <list default="true" id="2832b259-287f-4c16-9dde-3f08bc1d346f" name="Changes" comment="rust day 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go/day5/day5_part1.go" beforeDir="false" afterPath="$PROJECT_DIR$/go/day5/day5_part1.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rust/src/day5/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rust/src/day5/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +77,11 @@
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "/home/osesantos/git/adventofcode-2022/rust/Cargo.toml",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -136,8 +136,19 @@
       <workItem from="1679437648745" duration="189000" />
       <workItem from="1687903695325" duration="224000" />
       <workItem from="1687903928199" duration="20000" />
-      <workItem from="1687904078171" duration="295000" />
+      <workItem from="1687904078171" duration="336000" />
+      <workItem from="1687987549061" duration="65000" />
+      <workItem from="1687991526250" duration="6410000" />
     </task>
+    <task id="LOCAL-00001" summary="rust day 5">
+      <option name="closed" value="true" />
+      <created>1687904405620</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687904405620</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,10 +156,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting go project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting go project" />
+    <MESSAGE value="rust day 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="rust day 5" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rust/src/day5/mod.rs</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rust/src/day5/mod.rs</url>
+          <line>38</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rust/src/day5/mod.rs</url>
+          <line>30</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

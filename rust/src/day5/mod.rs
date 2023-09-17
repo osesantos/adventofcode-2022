@@ -109,5 +109,33 @@ impl MovementExtensions for &String {
 }
 
 pub fn day5_2(file_name: &str) -> String {
-    "".to_string()
+    let lines = get_file_lines(file_name);
+    let movements: Vec<_> = lines.iter().map(|l| l.movement_parser().unwrap_or(Movement {
+        quantity: 0,
+        start_stack: 0,
+        end_stack: 0,
+    })).into_iter().filter(|m| m.quantity != 0).collect();
+
+    let mut stacks = convert_to_list(&lines);
+    let executed_stack = execute9001(movements, &mut stacks);
+
+    get_top_stacks(executed_stack)
+}
+
+fn execute9001(movements: Vec<Movement>, stacks: &mut Vec<Vec<char>>) -> &Vec<Vec<char>> {
+    movements.iter().for_each(|m| {
+        let mut collected = vec![];
+        let mut counter = 0;
+        while counter < m.quantity {
+            counter = counter + 1;
+            let e = stacks[m.start_stack as usize - 1].remove(0).clone();
+            collected.insert(0, e);
+        }
+        collected.reserve(0);
+        collected.iter().for_each(|c| {
+            stacks[m.end_stack as usize - 1].insert(0, *c);
+        });
+    });
+
+    return stacks;
 }

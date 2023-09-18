@@ -5,6 +5,7 @@ use crate::day3::{day3_1, day3_2};
 use crate::day4::{day4_1, day4_2};
 use crate::day5::{day5_1, day5_2};
 use crate::day6::{day6_1, day6_2};
+use crate::day7::{day7_1, day7_2};
 
 mod utils;
 mod day1;
@@ -14,6 +15,7 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 
 fn main() {
     println!();
@@ -61,4 +63,11 @@ fn main() {
     day6_2("sample_day6.txt").printable_result("sample day 6.2:");
     day6_1("input_day6.txt").printable_result("day 6.1:");
     day6_2("input_day6.txt").printable_result("day 6.2:");
+
+    println!();
+
+    day6_1("sample_day7.txt").printable_result("sample day 7.1:");
+    day6_2("sample_day7.txt").printable_result("sample day 7.2:");
+    day6_1("input_day7.txt").printable_result("day 7.1:");
+    day6_2("input_day7.txt").printable_result("day 7.2:");
 }

@@ -66,8 +66,8 @@ fn main() {
 
     println!();
 
-    day6_1("sample_day7.txt").printable_result("sample day 7.1:");
-    day6_2("sample_day7.txt").printable_result("sample day 7.2:");
-    day6_1("input_day7.txt").printable_result("day 7.1:");
-    day6_2("input_day7.txt").printable_result("day 7.2:");
+    day7_1("sample_day7.txt").printable_result("sample day 7.1:");
+    day7_2("sample_day7.txt").printable_result("sample day 7.2:");
+    day7_1("input_day7.txt").printable_result("day 7.1:");
+    day7_2("input_day7.txt").printable_result("day 7.2:");
 }
